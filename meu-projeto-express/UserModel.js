@@ -1,7 +1,7 @@
 const pool = require('./config');
 
 const User = {
-    getA11: async () => {
+    getAll: async () => {
         const result = await pool.query('SELECT * FROM users');
         return result.rows;
     },

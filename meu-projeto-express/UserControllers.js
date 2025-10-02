@@ -1,9 +1,9 @@
-const User = require('../meu-projeto-express/UserModel');
+const User = require('./UserModel');
 
 const userController = {
     getAllUsers: async (req, res) => {
         try {  
-            const users = await User.getA11();
+            const users = await User.getAll();
             res.json(users);
         } catch (error) {
             res.status(500).json({ error: 'Erro ao buscar usuários' });
